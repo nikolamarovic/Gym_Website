@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vežbe snage</title>
+
+     <!-- Css Styles -->
+     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+     <link rel="stylesheet" href="css/style.css" type="text/css">    
+
+     <script src="js/rate_training.js"></script>
+</head>
+<body onload="showInitialCommentsCore(); calculateAvgRaiting('coreCrossfit','avgRateCrossfit'); calculateAvgRaiting('coreBadAss','avgRateBadass'); calculateAvgRaiting('coreGluteCore','avgRateGlutecore');">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index_sr.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="core.html"><img src='img/flags/United-Kingdom-Flag-icon.png'></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index_sr.html">Početna</a></li>
+                            <li class='active'>
+                                <a href="#">Usluge</a>
+                                <ul class="dropdown">
+                                    <li><a href="./treninzi.html">Treninzi</a></li>   
+                                    <li><a href="./nutricionista.html">Nutricionista</a></li>
+                                    <li><a href="./masaze.html">Masaže</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./zakazivanje_treninga.html">Zakazivanje treninga</a></li>
+                            <li><a href="./moj_profil.html">Moj profil</a></li>
+                            <li><a href="./o_nama.html">O nama</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="img/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>VEŽBE SNAGE</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="index_sr.html"><i class="fa fa-home"></i> Početna</a>
+                            <a href="treninzi.html">Treninzi</a>
+                            <span>Vežbe snage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="classes-section">
+        <div class="class-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2>NAŠI TRENINZI ZA POVEĆANJE SNAGE</h2>
+                            <p>Naši treninzi za povećanje snage Vam mogu pomoći da povećate mišićnu masu
+                                <br />kao i snagu čitavog tela.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/crossfit-core-video-bg.jpg" id='crossfitCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h2>CROSSFIT</h2>
+                        <p>POGLEDAJ VIDEO I VIDI DA LI TI SE DOPADA</p>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#crossfitCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="crossfitCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/aIPQd8mKlHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>CROSSFIT</h2>
+                        <p>Težina: 5 Ocena: <span id='avgRateCrossfit'></span></p>
+                        <p class="long-details">CrossFit se promoviše i kao filozofija fizičkog vežbanja i kao takmičarski fitnes sport, koji uključuje elemente intervalentnog treninga visokog intenziteta, olimpijskog dizanja utega, pliometrije, poverliftinga, gimnastike, girevoi sporta, kaistetike, strongman-a i drugih vežbi. Prakticiraju ga članovi preko 13.000 pridruženih teretana, od kojih je otprilike polovina smeštena u Sjedinjenim Državama, i pojedinci koji svakodnevno vežbaju (inače poznate kao "VODs" ili "vorkouts of the dai"). CrossFit je kritikovan zbog navodnog nanošenja ljudi koji pate od nepotrebnih povreda i rabdomiolize, mogućeg po život opasnog raspada mišića od ekstremnog napora.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Rezerviši</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>KOMENTARI</h2>
+                    </div>
+                </div>
+            </div>
+            <template >
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="about-text text-left">
+                            <p></p>
+                            <p class="long-details"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreCrossfit','coreCrossfit')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  VIŠE</p></span>
+                        <span id="CommentSectioncoreCrossfit"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>KOMENTARIŠI</h4>
+                            <div class='ratings31'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='crossfitCoreOcena' name='crossfitCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings31").children, document.querySelector("#crossfitCoreOcena"));</script>
+                            <textarea placeholder="Ostavi komentar" value="comment" id="coreCrossfit"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreCrossfit',document.getElementById('coreCrossfit').value,document.querySelector('#crossfitCoreOcena').value)">Pošalji</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/glutecore-core-video-bg.jpg" id='glutecoreCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h2>GLUTE & CORE</h2>
+                        <p>POGLEDAJ VIDEO I VIDI DA LI TI SE DOPADA</p>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#glutecoreCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="glutecoreCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/cz1gh_aYn5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>Glute & Core</h2>
+                        <p>Težina: 4 Ocena: <span id='avgRateGlutecore'></span></p>
+                        <p class="long-details">Ako je vaše telo automobil, gluteni se često opisuju kao motor. Nije važno da li nešto zamahnete, čučnete ili skačete - gluteni su uključeni; a ako nisu, iskusićete nepotreban stres u donjem delu leđa.
+                            Vaš gluteus makimus je ekstenzor kuka i eksterni rotator kuka, koji povezuje vaš križnik (donji deo leđa) i karlice (kuk) sa bedrinom (nogom).
+                            Ovi mišići su otmičari kukova, ali takođe pomažu u unutrašnjoj i spoljašnjoj rotaciji. Vaš gluteus medius je u potpunosti pokriven gluteus makimusom.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Rezerviši</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>KOMENTARI</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreGluteCore','coreGluteCore')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  VIŠE</p></span>
+                        <span id="CommentSectioncoreGluteCore"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>KOMENTARIŠI</h4>
+                            <div class='ratings32'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='glutecoreCoreOcena' name='glutecoreCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings32").children, document.querySelector("#glutecoreCoreOcena"));</script>
+                            <textarea placeholder="Ostavi komentar" value="comment" id="coreGluteCore"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreGluteCore',document.getElementById('coreGluteCore').value,document.querySelector('#glutecoreCoreOcena').value)">Pošalji</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/badass-core-video-bg.jpg" id='badassCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h4>POGLEDAJ VIDEO I VIDI DA LI TI SE DOPADA</h4>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#baddassCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="baddassCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd8tEXDTutA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>BadAss</h2>
+                        <p>Težina: 5 Ocena: <span id='avgRateBadass'></span></p>
+                        <p class="long-details">BadAss - trening visokog ponavljanja - nova, revolucionarna, naučno zasnovana metoda koja povećava tonus mišića, ubrzava sagorijevanje masti i oblikuje zadnjicu. Ovaj trening je namenjen onim ženama koje žele da razviju lepu i snažnu zadnjicu.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Rezerviši</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Vreme je da probate a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>KOMENTARI</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreBadAss','coreBadAss')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  VIŠE</p></span>
+                        <span id="CommentSectioncoreBadAss"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>KOMENTARIŠI</h4>
+                            <div class='ratings33'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='badassCoreOcena' name='badassCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings33").children, document.querySelector("#badassCoreOcena"));</script>
+                            <textarea placeholder="Ostavi komentar" value="comment" id="coreBadAss"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreBadAss',document.getElementById('coreBadAss').value,document.querySelector('#badassCoreOcena').value)">Pošalji</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Pratite nas i na društvenim mrežama</p>
+                        <div class="social-links">
+                            <h6>Zaprati nas</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="kor.html">Vežbe snage</a></li>    
+                            <li><a href="kardio.html">Kardio</a></li>
+                            <li><a href="joga.html">Joga</a></li>
+                            <li><a href="pilates_srp.html">Pilates</a></li>
+                            <li><a href="nutricionista.html">Nutricionista</a></li>
+                            <li><a href="masaze.html">Masaže</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Informiši se</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Telefon:</span>
+                                (011) 123456789
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                nonstopfittness.info@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Adresa</span>
+                                Bulevar Kralja Aleksandra 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Nikola Marović 17/0700 Momčilo Niketić 17/0174 Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rezervacije.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core</title>
+
+     <!-- Css Styles -->
+     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+     <link rel="stylesheet" href="css/style.css" type="text/css">    
+
+     <script src="js/rate_training.js"></script>
+</head>
+<body onload="showInitialCommentsCore(); calculateAvgRaiting('coreCrossfit','avgRateCrossfit'); calculateAvgRaiting('coreBadAss','avgRateBadass'); calculateAvgRaiting('coreGluteCore','avgRateGlutecore');">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index_en.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="kor.html"><img src='img/flags/Serbia-Flag-icon.png'></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index_en.html">Home</a></li>
+                            <li class="active"><a href="#">Services</a>
+                                <ul class="dropdown">
+                                    <li><a href="./workouts.html">Workouts</a></li>   
+                                    <li><a href="./nutrition.html">Nutrition</a></li>
+                                    <li><a href="./massages.html">Massages</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./schedule.html">Schedule</a></li>
+                            <li><a href="./my_profile.html">My profile</a></li>
+                            <li><a href="./about-us.html">About us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="img/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>CORE</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="index_en.html"><i class="fa fa-home"></i> Home</a>
+                            <a href="workouts.html">Workouts</a>
+                            <span>Core</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="classes-section">
+        <div class="class-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2>Our CORE PROGRAMS</h2>
+                            <p>Our core programs can help you discover new training techniques and exercises
+                                <br />that offer a dynamic and efficient full-body workout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/crossfit-core-video-bg.jpg" id='crossfitCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h2>CROSSFIT</h2>
+                        <p>PLAY VIDEO TO SEE IF YOU LIKE IT</p>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#crossfitCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="crossfitCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/aIPQd8mKlHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>CROSSFIT</h2>
+                        <p>Difficulty: 5 Rating: <span id='avgRateCrossfit'></span></p>
+                        <p class="long-details">CrossFit is promoted as both a physical exercise philosophy and a competitive fitness sport, incorporating elements from high-intensity interval training, Olympic weightlifting, plyometrics, powerlifting, gymnastics, girevoy sport, calisthenics, strongman, and other exercises. It is practiced by members of over 13,000 affiliated gyms, roughly half of which are located in the United States, and by individuals who complete daily workouts (otherwise known as "WODs" or "workouts of the day"). CrossFit has been criticized for allegedly causing people to suffer from unnecessary injuries and exertional rhabdomyolysis, a possible life-threatening breakdown of muscle from extreme exertion.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Reserve</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/crossfit-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/crossfit-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Crossfit</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>COMMENTS</h2>
+                    </div>
+                </div>
+            </div>
+            <template >
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="about-text text-left">
+                            <p></p>
+                            <p class="long-details"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreCrossfit','coreCrossfit')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  MORE</p></span>
+                        <span id="CommentSectioncoreCrossfit"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>COMMENT</h4>
+                            <div class='ratings31'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='crossfitCoreOcena' name='crossfitCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings31").children, document.querySelector("#crossfitCoreOcena"));</script>
+                            <textarea placeholder="Leave a comment" value="comment" id="coreCrossfit"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreCrossfit',document.getElementById('coreCrossfit').value,document.querySelector('#crossfitCoreOcena').value)">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/glutecore-core-video-bg.jpg" id='glutecoreCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h2>GLUTE & CORE</h2>
+                        <p>PLAY VIDEO TO SEE IF YOU LIKE IT</p>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#glutecoreCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="glutecoreCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/cz1gh_aYn5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>Glute & Core</h2>
+                        <p>Difficulty: 4 Rating: <span id='avgRateGlutecore'></span></p>
+                        <p class="long-details">If your body is a car, your glutes are often described as the engine. It doesn’t matter if you’re swinging something, squatting, or jumping – your glutes are involved; and if they’re not, then you’re going to experience unnecessary stress in your lower-back.
+                            Your gluteus maximus is a hip extensor and external hip rotator, connecting your sacrum (lower-back) and pelvis (hip) to your femur (leg).
+                            These muscles are hip abductors, but also assist in internal and external rotation. Your glute medius is completely covered by the gluteus maximus.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Reserve</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/glutecore-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/glutecore-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try Glute & Core Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>COMMENTS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreGluteCore','coreGluteCore')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  MORE</p></span>
+                        <span id="CommentSectioncoreGluteCore"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>COMMENT</h4>
+                            <div class='ratings32'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='glutecoreCoreOcena' name='glutecoreCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings32").children, document.querySelector("#glutecoreCoreOcena"));</script>
+                            <textarea placeholder="Leave a comment" value="comment" id="coreGluteCore"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreGluteCore',document.getElementById('coreGluteCore').value,document.querySelector('#glutecoreCoreOcena').value)">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Video Section Begin -->
+    <section class="video-section set-bg" data-setbg="img/programs/workouts/core/badass-core-video-bg.jpg" id='badassCore'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-text">
+                        <h4>PLAY VIDEO TO SEE IF YOU LIKE IT</h4>
+                        <i class="fa fa-play play-btn" data-toggle="modal" data-target="#baddassCoreVideo"></i>
+                    </div>
+                    <div class="modal fade" id="baddassCoreVideo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd8tEXDTutA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video Section End -->
+
+    <!-- Program info section begin-->
+    <section class='classes-section' style='padding-top:20px;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>BadAss</h2>
+                        <p>Difficulty: 5 Rating: <span id='avgRateBadass'></span></p>
+                        <p class="long-details">BadAss - High Repetition Training - a new, revolutionary, science-based method that increases muscle tone, accelerates fat burning and shapes the buttocks. This training is intended for those women who want to develop a beautiful and strong buttocks.
+                        </p>
+                    </div>
+                    <a href="schedule.html" class="primary-btn">Reserve</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Program info section end -->
+
+    <!-- Gallery Section Begin -->
+    <section class="gallery-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mix">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-1.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-1.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout gym">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-2.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-2.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mix workout">
+                    <div class="gallery-item">
+                        <img src="img/programs/workouts/core/badass-3.jpg" alt="">
+                        <div class="gi-hover-warp">
+                            <div class="gi-hover">
+                                <a href="img/programs/workouts/core/badass-3.jpg" class="image-popup"><i class="fa fa-search-plus"></i></a>
+                                <h6>Time to Try a BadAss Training</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Comments Section Begin -->
+    <section class='contact-section'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-text text-left">
+                        <h2>COMMENTS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-form" style='padding-bottom:20px;'>
+                        <span onclick="showContent('CommentSectioncoreBadAss','coreBadAss')" id='moreComments'><i class="fa fa-angle-double-down" ></i>  MORE</p></span>
+                        <span id="CommentSectioncoreBadAss"></span>
+                       <form action="" onsubmit="return false"> 
+                            <h4>COMMENT</h4>
+                            <div class='ratings33'>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                                <span class='fa fa-star-o'></span>
+                            </div>
+                            <input type='hidden' id='badassCoreOcena' name='badassCoreOcena'>
+                            <script> rateTraining(document.querySelector(".ratings33").children, document.querySelector("#badassCoreOcena"));</script>
+                            <textarea placeholder="Leave a comment" value="comment" id="coreBadAss"></textarea>
+                            <button type="submit" class="c-btn" onclick="addComment('coreBadAss',document.getElementById('coreBadAss').value,document.querySelector('#badassCoreOcena').value)">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Comment Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Despite growth of the Internet over the past seven years, the use of toll-free phone numbers
+                            in television advertising continues.</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="core.html">Core</a></li>    
+                            <li><a href="cardio.html">Cardio</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="pilates_en.html">Pilates</a></li>
+                            <li><a href="nutrition.html">Nutrition</a></li>
+                            <li><a href="massages.html">Massages</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                (011) 123456789
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                nonstopfittness.info@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Address</span>
+                                Dimitrija Tucovića 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Nikola Marović 17/0700 Momčilo Niketić 17/0174 Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rezervacije.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>

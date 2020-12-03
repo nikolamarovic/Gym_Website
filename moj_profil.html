@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My profil</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <script src="js/tmp_script.js"></script>
+</head>
+<body onload="insertMyReservations(), getUsername()">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index_sr.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="my_profile.html"><img src='img/flags/United-Kingdom-Flag-icon.png'></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index_sr.html">Početna</a></li>
+                            <li>
+                                <a href="#">Usluge</a>
+                                <ul class="dropdown">
+                                    <li><a href="./treninzi.html">Treninzi</a></li>   
+                                    <li><a href="./nutricionista.html">Nutricionista</a></li>
+                                    <li><a href="./masaze.html">Masaže</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./zakazivanje_treninga.html">Zakazivanje treninga</a></li>
+                            <li class="active"><a href="./moj_profil.html">Moj profil</a></li>
+                            <li><a href="./o_nama.html">O nama</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="img/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2 id='profile_username'></h2>
+                        <div class="breadcrumb-controls">
+                            <a href="index_sr.html"><i class="fa fa-home"></i> Početna</a>
+                            <span>Moj profil</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- Class Time Section Begin -->
+    <section class="classtime-section class-time-table spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Raspored Nedeljnih Treninga</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timetable-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">svi</li>
+                            <li data-tsfilter="pilates">pilates</li>
+                            <li data-tsfilter="core">vežbe snage</li>
+                            <li data-tsfilter="joga">joga</li>
+                            <li data-tsfilter="cardio">kardio</li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="classtime-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Ponedeljak</th>
+                            <th>Utorak</th>
+                            <th>Sreda</th>
+                            <th>Četvrtak</th>
+                            <th>Petak</th>
+                            <th>Subota</th>
+                            <th>Nedelja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="workout-time">10.00</td>
+                            <td class="hover-bg ts-item"  data-tsmeta="joga"  id="my_profile1">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile2">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile3">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile4">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile5">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile6">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile7">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">11.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile11">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile12">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile13">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile14">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile15">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile16">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile17">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">12.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile21">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile22">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile23">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile24">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile25">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile26">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile27">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">13.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile31">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile32">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile33">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile34">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile35">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile36">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile37">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">14.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile41">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile42">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile43">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile44">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile45">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile46">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile47">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">15.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile51">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile52">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile53">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile54">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile55">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile56">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile57">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">16.00</td>
+                            <td class="hover-bg ts-item"  data-tsmeta="cardio" id="my_profile61">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile62">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile63">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="joga" id="my_profile64">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile65">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile66">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile67">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">17.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile71">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile72">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile73">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile74">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="pilates" id="my_profile75">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile76">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile77">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">18.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile81">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile82">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="cardio" id="my_profile83">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile84">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" id="my_profile85">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="cardio" id="my_profile86">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="cardio" id="my_profile87">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">19.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile91">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile92">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile93">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile94">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile95">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile96">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile97">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">20.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile101">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile102">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile103">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile104">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile105">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core"id="my_profile106">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile107">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">21.00</td>
+                            <td class="hover-bg ts-item"  id="my_profile111">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile112">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile113">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile114">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item"  id="my_profile115">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core"id="my_profile116">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="core" id="my_profile117">
+                                <span></span>
+                                <h6></h6>
+                                <button type='button' class='dugme hide' onclick="quitReservation(this)">Quit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Class Time Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Pratite nas i na društvenim mrežama</p>
+                        <div class="social-links">
+                            <h6>Zaprati nas</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="kor.html">Vežbe snage</a></li>    
+                            <li><a href="kardio.html">Kardio</a></li>
+                            <li><a href="joga.html">Joga</a></li>
+                            <li><a href="pilates_srp.html">Pilates</a></li>
+                            <li><a href="nutricionista.html">Nutricionista</a></li>
+                            <li><a href="masaze.html">Masaže</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Informiši se</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Telefon:</span>
+                                (011) 123456789
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                nonstopfittness.info@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Adresa</span>
+                                Bulevar Kralja Aleksandra 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Nikola Marović 17/0700 Momčilo Niketić 17/0174 Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rezervacije.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>

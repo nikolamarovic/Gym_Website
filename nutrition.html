@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <script src="js/tmp_script.js"></script>
+
+    <script src="js/jsPDF/dist/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+<body onload="setRequiredFields()">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index_en.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="nutricionista.html"><img src='img/flags/Serbia-Flag-icon.png'></a>
+            </div>
+            <div class="container">
+                <div class="nav-menu">
+                    <nav class="mainmenu mobile-menu">
+                        <ul>
+                            <li><a href="./index_en.html">Home</a></li>
+                            <li class="active"><a href="#">Services</a>
+                                <ul class="dropdown">
+                                    <li><a href="./workouts.html">Workouts</a></li>   
+                                    <li><a href="./nutrition.html">Nutrition</a></li>
+                                    <li><a href="./massages.html">Massages</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./schedule.html">Schedule</a></li>
+                            <li><a href="./my_profile.html">My profile</a></li>
+                            <li><a href="./about-us.html">About us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg spad" data-setbg="img/about-bread.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>NUTRITION</h2>
+                        <div class="breadcrumb-controls">
+                            <a href="index_en.html"><i class="fa fa-home"></i> Home</a>
+                            <span>Nutrition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="home-about spad" id='nutritionContent'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>NUTRITION</h2>
+                        <p class="short-details">CrossFit is a cutting-edge functional fitness system that can help
+                            everyday men.</p>
+                        <p class="long-details">Good nutrition is an important part of leading a healthy lifestyle. Combined with physical activity, your diet can help you to reach and maintain a healthy weight, reduce your risk of chronic diseases (like heart disease and cancer), and promote your overall health.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="img/programs/nutrition/nutrition-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Appointment Section Begin -->
+    <section class="blog-single-section">
+        <div class="class-title set-bg" data-setbg="img/feature/feature-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2 style='color:black;'>BOOK AN APPOINTMENT WITH NUTRITIONIST</h2>
+                            <p  style='color:black;'>Good nutrition is an important part of leading a healthy lifestyle. Combined with physical activity, your diet can help you to reach and maintain a healthy weight, reduce your risk of chronic diseases (like heart disease and cancer), and promote your overall health.</p>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="leave-comment-form">
+                            <h4>RESERVE YOUR APPOINTMENT</h4>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Name" id="NameNutrition" required>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Email" id="EmailNutrition" required>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Phone" id="PhoneNutrition" required>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="date" placeholder="Date" id = "DateNutrition" required>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <textarea placeholder="Describe your problem..." id='AboutNutrition' required></textarea>
+                                        <button type="submit" class="leave-btn" onclick="nutritionAppointment(document.getElementById('NameNutrition').value,document.getElementById('EmailNutrition').value,document.getElementById('PhoneNutrition').value,document.getElementById('DateNutrition').value,document.getElementById('AboutNutrition').value)">Reserve your appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Appointment Section End-->
+
+    <!-- Hidden section for pdf generator BEGIN -->
+    <section class="blog-single-section" style='display:none' id='nutritionPDF'>
+        <div class="class-title set-bg" id='hideDiv' data-setbg="img/feature/feature-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h2 style='color:black;'>THANK YOU FOR RESERVING AN APPOINTMENT</h2>
+                            <p  style='color:black;'>Good nutrition is an important part of leading a healthy lifestyle. Combined with physical activity, your diet can help you to reach and maintain a healthy weight, reduce your risk of chronic diseases (like heart disease and cancer), and promote your overall health.</p>
+                            </br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="leave-comment-form">
+                            <h4>YOUR DETAILS</h4>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Name" id="NameNutrition">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Email" id="EmailNutrition">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="text" placeholder="Phone" id="PhoneNutrition">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input type="date" placeholder="Date" id = "DateNutrition">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea placeholder="Describe your problem..." id='AboutNutrition'></textarea>
+                                        <button type="submit" class="leave-btn" onclick="nutritionAppointment(document.getElementById('NameNutrition').value,document.getElementById('EmailNutrition').value,document.getElementById('PhoneNutrition').value,document.getElementById('DateNutrition').value,document.getElementById('AboutNutrition').value)">Reserve your appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hidden section for pdf generator END -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo-item">
+                        <div class="f-logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <p>Despite growth of the Internet over the past seven years, the use of toll-free phone numbers
+                            in television advertising continues.</p>
+                        <div class="social-links">
+                            <h6>Follow us</h6>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Program</h5>
+                        <ul class="workout-program">
+                            <li><a href="core.html">Core</a></li>    
+                            <li><a href="cardio.html">Cardio</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="pilates_en.html">Pilates</a></li>
+                            <li><a href="nutrition.html">Nutrition</a></li>
+                            <li><a href="massages.html">Massages</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Get Info</h5>
+                        <ul class="footer-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <span>Phone:</span>
+                                (011) 123456789
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope-o"></i>
+                                <span>Email:</span>
+                                nonstopfittness.info@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>Address</span>
+                                Dimitrija Tucovića 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="ct-inside">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Nikola Marović 17/0700 Momčilo Niketić 17/0174 Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rezervacije.js"></script>
+</body>
+</html>

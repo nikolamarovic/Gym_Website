@@ -1,0 +1,25 @@
+body {
+    background-image: url(../../img/hero-slider/hero-3.jpg);
+    display:flex; 
+    flex-direction:column; 
+   
+}
+
+#username{
+    width: 300px;
+   
+}
+
+#password{
+    width: 300px;
+}
+
+.login{
+    text-align: center;
+    padding-top: 15%;
+}
+
+footer{
+    text-align: center;
+    margin-top:auto; 
+}
